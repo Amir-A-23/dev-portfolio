@@ -1,24 +1,11 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
-import Navbar from './Navbar';
-import Hero from './Hero';
-import About from './About';
-import Skills from './Skills';
-import Projects from './Projects';
-import Contact from './Contact';
+
 function App() {
 	return (
-		<div class='flex flex-col'>
-			<Navbar />
-			<Hero />
-			<About />
-			<Skills />
-			<div>
-				<Projects />
-			</div>
-
-			<Contact />
+		<div classname='flex w-screen h-screen items-center justify-center'>
+			<p className='text-2xl text-blue-500'>Hi there how are you</p>
 		</div>
 	);
 }
