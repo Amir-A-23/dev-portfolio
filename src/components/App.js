@@ -4,9 +4,7 @@ import { faGithub } from '@fortawesome/free-brands-svg-icons';
 
 function App() {
 	return (
-		<div classname='flex w-screen h-screen items-center justify-center'>
-			<p className='text-2xl text-blue-500'>Hi there how are you</p>
-		</div>
+		<div classname='flex w-screen h-screen min-h-screen flex-col item-center justify-center relative bg-primary'></div>
 	);
 }
 
