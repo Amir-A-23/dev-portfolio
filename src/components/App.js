@@ -1,4 +1,3 @@
-import './App.css';
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
@@ -15,7 +14,10 @@ function App() {
 			<Hero />
 			<About />
 			<Skills />
-			<Projects />
+			<div>
+				<Projects />
+			</div>
+
 			<Contact />
 		</div>
 	);
