@@ -1,10 +1,14 @@
 import React, { useState } from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGithub } from '@fortawesome/free-brands-svg-icons';
-import { faBars } from '@fortawesome/free-solid-svg-icons';
+
 import { Spline } from '@splinetool/react-spline';
 import amir from '../assets/images/amir.jpg';
+import { IoMenu, IoCodeWorking } from 'react-icons/io5';
 
+import {
+	VerticalTimeline,
+	VerticalTimelineElement,
+} from 'react-vertical-timeline-component';
+import 'react-vertical-timeline-component/style.min.css';
 function App() {
 	const [isActive, setIsActive] = useState(false);
 
@@ -49,7 +53,7 @@ function App() {
 					<div
 						className='block md:hidden ml-auto cursor-pointer text-2xl text-textBase'
 						onClick={() => setIsActive(!isActive)}>
-						<FontAwesomeIcon icon={faBars} />
+						<IoMenu className='text-2xl text-textBase' />
 					</div>
 					{isActive && (
 						<div className='p-4 w-275 bg-navBar rounded-lg fixed top-24 right-16 flex flex-col items-center justify-evenly gap-6'>
@@ -134,6 +138,29 @@ function App() {
 						</p>
 					</div>
 				</section>
+				{/* timeline section */}
+				<sections className='w-full flex items-center justify-center'>
+					<VerticalTimeline>
+						<VerticalTimelineElement
+							className='vertical-timeline-element--work'
+							contentStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
+							contentArrowStyle={{
+								borderRight: '7px solid  rgb(33, 150, 243)',
+							}}
+							date='2011 - present'
+							iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
+							icon={<IoCodeWorking />}>
+							<h3 className='vertical-timeline-element-title'>
+								Creative Director
+							</h3>
+							<h4 className='vertical-timeline-element-subtitle'>Miami, FL</h4>
+							<p>
+								Creative Direction, User Experience, Visual Design, Project
+								Management, Team Leading
+							</p>
+						</VerticalTimelineElement>
+					</VerticalTimeline>
+				</sections>
 				{/* Skills section */}
 				<section id='skills'>Technical Skills:</section>
 			</main>
