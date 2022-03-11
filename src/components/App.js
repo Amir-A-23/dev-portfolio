@@ -1,8 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
+import { faBars } from '@fortawesome/free-solid-svg-icons';
 import { Spline } from '@splinetool/react-spline';
 function App() {
+	const [isActive, setIsActive] = useState(false);
+
 	return (
 		<div className='flex w-screen h-screen min-h-screen flex-col item-center justify-center relative bg-primary pb-20'>
 			{/* Navigation Bar */}
@@ -41,6 +44,51 @@ function App() {
 							Download Resume
 						</a>
 					</div>
+					<div
+						className='block md:hidden ml-auto cursor-pointer text-2xl text-textBase'
+						onClick={() => setIsActive(!isActive)}>
+						<FontAwesomeIcon icon={faBars} />
+					</div>
+					{isActive && (
+						<div className='p-4 w-275 bg-navBar rounded-lg fixed top-24 right-16 flex flex-col items-center justify-evenly gap-6'>
+							<a
+								href='#home'
+								className='text-base text-textBase font-medium hover:text-slate-100 cursor-pointer duration-100 ease-in-out'
+								onClick={() => setIsActive(false)}>
+								Home
+							</a>
+							<a
+								href='#about'
+								className='text-base text-textBase font-medium hover:text-slate-100 cursor-pointer duration-100 ease-in-out'
+								onClick={() => setIsActive(false)}>
+								About
+							</a>
+							<a
+								href='#skills'
+								className='text-base text-textBase font-medium hover:text-slate-100 cursor-pointer duration-100 ease-in-out'
+								onClick={() => setIsActive(false)}>
+								Skills
+							</a>
+							<a
+								href='#projects'
+								className='text-base text-textBase font-medium hover:text-slate-100 cursor-pointer duration-100 ease-in-out'
+								onClick={() => setIsActive(false)}>
+								Projects
+							</a>
+							<a
+								href='#contact'
+								className='text-base text-textBase font-medium hover:text-slate-100 cursor-pointer duration-100 ease-in-out'
+								onClick={() => setIsActive(false)}>
+								Contact
+							</a>
+							<a
+								href='#'
+								className='text-base text-textBase font-medium hover:text-slate-100 cursor-pointer border border-textBase px-2 py-1 rounded-xl hover:border-gray-100 duration-100 ease-in'
+								onClick={() => setIsActive(false)}>
+								Download Resume
+							</a>
+						</div>
+					)}
 				</div>
 			</nav>
 			<div className='relative' id='home'>
