@@ -96,10 +96,11 @@ function App() {
 			<div className='relative' id='home'>
 				<Spline scene='https://prod.spline.design/oo6IxFu8UDjFUmjD/scene.spline' />
 				<div className='absolute bottom-10 w-full justify-center items-center flex'>
-					<div className='shadow-md p-4 flex items-center justify-center bg-zinc-900 rounded-3xl'>
+					<div className='shadow-md p-4 flex items-center justify-center background-color: rgba(255, 255, 255, 0.08) rounded-3xl'>
 						<p className='text-textBase'>
-							Hello, I'm a full-stack developer from Toronto, Canada! 👋🏾
+							Hello, I'm a full-stack developer from Toronto, Canada!
 						</p>
+						<span className='animate-wave text-2xl'>👋🏾</span>
 					</div>
 				</div>
 			</div>
