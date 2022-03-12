@@ -2,13 +2,15 @@ import React, { useState } from 'react';
 
 import { Spline } from '@splinetool/react-spline';
 import amir from '../assets/images/amir.jpg';
-import { IoMenu, IoCodeWorking } from 'react-icons/io5';
+import { IoMenu, IoLogoGithub } from 'react-icons/io5';
 
 import {
 	VerticalTimeline,
 	VerticalTimelineElement,
 } from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
+
+import { Experience, Projects } from '../data';
 function App() {
 	const [isActive, setIsActive] = useState(false);
 
@@ -138,31 +140,68 @@ function App() {
 						</p>
 					</div>
 				</section>
+
 				{/* timeline section */}
-				<sections className='w-full flex items-center justify-center'>
+				<section className='w-full flex items-center justify-center'>
 					<VerticalTimeline>
-						<VerticalTimelineElement
-							className='vertical-timeline-element--work'
-							contentStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
-							contentArrowStyle={{
-								borderRight: '7px solid  rgb(33, 150, 243)',
-							}}
-							date='2011 - present'
-							iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
-							icon={<IoCodeWorking />}>
-							<h3 className='vertical-timeline-element-title'>
-								Creative Director
-							</h3>
-							<h4 className='vertical-timeline-element-subtitle'>Miami, FL</h4>
-							<p>
-								Creative Direction, User Experience, Visual Design, Project
-								Management, Team Leading
-							</p>
-						</VerticalTimelineElement>
+						{Experience &&
+							Experience.map((n) => (
+								<VerticalTimelineElement
+									key={n.id}
+									className='vertical-timeline-element--work'
+									contentStyle={{
+										background: 'rgb(21, 24, 21)',
+										color: '#888',
+									}}
+									contentArrowStyle={{
+										borderRight: '7px solid  rgb(21, 24, 21)',
+									}}
+									date={n.category}
+									iconStyle={{ background: 'rgb(21, 24, 21)', color: '#888' }}
+									icon={n.iconsSrc}>
+									<h3 className='vertical-timeline-element-title'>{n.title}</h3>
+									<h4 className='vertical-timeline-element-subtitle'>
+										{n.location}
+									</h4>
+									<p>{n.badges}</p>
+								</VerticalTimelineElement>
+							))}
 					</VerticalTimeline>
-				</sections>
-				{/* Skills section */}
-				<section id='skills'>Technical Skills:</section>
+				</section>
+				{/* Projects */}
+				<section
+					className='flex flex-wrap items-center justify-evenly my-24 gap-4'
+					id='projects'>
+					{Projects &&
+						Projects.map((n, i) => (
+							<div
+								key={n.id}
+								className='border border-zinc-800 rounded-md p-2 min-w-[275px] md:max-w-[275px] hover:border-zinc-600 duration-100 ease-in-out'>
+								<p className='text-lg text-textBase font-medium uppercase'>
+									{n.name}
+								</p>
+								<img
+									src={n.imageSrc}
+									alt=''
+									className='w-full h-full object-cover rounded-md my-4'
+								/>
+								<div className='flex flex-1 items-center justify-between'>
+									<p className='text-lg text-gray-300'>
+										Technologies
+										<span className='block text-sm text-gray-500'>
+											{n.techs}
+										</span>
+									</p>
+
+									<a href={n.github}>
+										<div>
+											<IoLogoGithub className='text-textBase text-3xl cursor-pointer' />
+										</div>
+									</a>
+								</div>
+							</div>
+						))}
+				</section>
 			</main>
 		</div>
 	);
