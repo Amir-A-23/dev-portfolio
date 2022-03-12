@@ -13,6 +13,8 @@ import {
 import 'react-vertical-timeline-component/style.min.css';
 
 import { Experience, Projects } from '../data';
+
+import { Link, Element } from 'react-scroll';
 function App() {
 	const [isActive, setIsActive] = useState(false);
 
@@ -23,31 +25,62 @@ function App() {
 				<div className='w-full md:w-880 bg-navBar p-4 rounded-2xl flex items-center'>
 					<p className='text-lg text-slate-200 font-medium'>Amir Ali</p>
 					<div className='hidden md:flex items-center gap-6 ml-6 flex-1'>
-						<a
-							href='#home'
-							className='text-base text-textBase font-medium hover:text-slate-100 cursor-pointer duration-100 ease-in-out'>
-							Home
-						</a>
-						<a
-							href='#about'
-							className='text-base text-textBase font-medium hover:text-slate-100 cursor-pointer duration-100 ease-in-out'>
-							About
-						</a>
-						<a
-							href='#skills'
-							className='text-base text-textBase font-medium hover:text-slate-100 cursor-pointer duration-100 ease-in-out'>
-							Skills
-						</a>
-						<a
-							href='#projects'
-							className='text-base text-textBase font-medium hover:text-slate-100 cursor-pointer duration-100 ease-in-out'>
-							Projects
-						</a>
-						<a
-							href='#contact'
-							className='text-base text-textBase font-medium hover:text-slate-100 cursor-pointer duration-100 ease-in-out'>
-							Contact
-						</a>
+						<li className='list-none'>
+							<Link
+								activeClass='active'
+								className='text-base text-textBase font-medium hover:text-slate-100 cursor-pointer duration-100 ease-in-out'
+								to='home'
+								spy={true}
+								smooth={true}
+								duration={500}>
+								Home
+							</Link>
+						</li>
+						<li className='list-none'>
+							<Link
+								activeClass='active'
+								className='text-base text-textBase font-medium hover:text-slate-100 cursor-pointer duration-100 ease-in-out'
+								to='about'
+								spy={true}
+								smooth={true}
+								duration={500}>
+								About
+							</Link>
+						</li>
+						<li className='list-none'>
+							<Link
+								activeClass='active'
+								className='text-base text-textBase font-medium hover:text-slate-100 cursor-pointer duration-100 ease-in-out'
+								to='skills'
+								spy={true}
+								smooth={true}
+								duration={500}>
+								Skills
+							</Link>
+						</li>
+						<li className='list-none'>
+							<Link
+								activeClass='active'
+								className='text-base text-textBase font-medium hover:text-slate-100 cursor-pointer duration-100 ease-in-out'
+								to='projects'
+								spy={true}
+								smooth={true}
+								duration={500}>
+								Projects
+							</Link>
+						</li>
+						<li className='list-none'>
+							<Link
+								activeClass='active'
+								className='text-base text-textBase font-medium hover:text-slate-100 cursor-pointer duration-100 ease-in-out'
+								to='contact'
+								spy={true}
+								smooth={true}
+								duration={500}>
+								Contact
+							</Link>
+						</li>
+
 						<a
 							href={resume}
 							download
@@ -62,36 +95,56 @@ function App() {
 					</div>
 					{isActive && (
 						<div className='p-4 w-275 bg-navBar rounded-lg fixed top-24 right-16 flex flex-col items-center justify-evenly gap-6'>
-							<a
-								href='#home'
+							<Link
+								activeClass='active'
 								className='text-base text-textBase font-medium hover:text-slate-100 cursor-pointer duration-100 ease-in-out'
+								to='home'
+								spy={true}
+								smooth={true}
+								duration={500}
 								onClick={() => setIsActive(false)}>
 								Home
-							</a>
-							<a
-								href='#about'
+							</Link>
+							<Link
+								activeClass='active'
 								className='text-base text-textBase font-medium hover:text-slate-100 cursor-pointer duration-100 ease-in-out'
+								to='about'
+								spy={true}
+								smooth={true}
+								duration={500}
 								onClick={() => setIsActive(false)}>
 								About
-							</a>
-							<a
-								href='#skills'
+							</Link>
+							<Link
+								activeClass='active'
 								className='text-base text-textBase font-medium hover:text-slate-100 cursor-pointer duration-100 ease-in-out'
+								to='skills'
+								spy={true}
+								smooth={true}
+								duration={500}
 								onClick={() => setIsActive(false)}>
 								Skills
-							</a>
-							<a
-								href='#projects'
+							</Link>
+							<Link
+								activeClass='active'
 								className='text-base text-textBase font-medium hover:text-slate-100 cursor-pointer duration-100 ease-in-out'
+								to='project'
+								spy={true}
+								smooth={true}
+								duration={500}
 								onClick={() => setIsActive(false)}>
 								Projects
-							</a>
-							<a
-								href='#contact'
+							</Link>
+							<Link
+								activeClass='active'
 								className='text-base text-textBase font-medium hover:text-slate-100 cursor-pointer duration-100 ease-in-out'
+								to='contact'
+								spy={true}
+								smooth={true}
+								duration={500}
 								onClick={() => setIsActive(false)}>
 								Contact
-							</a>
+							</Link>
 							<a
 								href='https://github.com/Amir-A-23/dev-portfolio/blob/main/src/assets/images/Amir-Resume.pdf'
 								className='text-base text-textBase font-medium hover:text-slate-100 cursor-pointer border border-textBase px-2 py-1 rounded-xl hover:border-gray-100 duration-100 ease-in'
@@ -117,91 +170,96 @@ function App() {
 			{/* Main sections */}
 			<main className='w-[80%] mt-4'>
 				{/* About Section */}
-				<section
-					className='w-full grid grid-cols-1 md:col-span-4 gap-4 mt-2 mb-24'
-					id='about'>
-					{/* image box */}
-					<div className='w-full h-210 flex items-center justify-center'>
-						<div class='avatar'>
-							<div class='w-48 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2'>
-								<img src={amir} alt='' />
-							</div>
-						</div>
-					</div>
-					{/* content box */}
-					<div className='w-full h-210 flex flex-col items-center justify-center'>
-						<p className='text-lg text-textBase text-center'>
-							Hi! I'm Amir, a passionate and enthusiastic full stack web
-							developer based in Toronto, Canada. I have a passion for
-							developing tools that simplifies and benefits peoples lives. I
-							love gaming, music, mixed media art, and fintech.
-						</p>
-					</div>
-				</section>
-
-				{/* timeline section */}
-				<section
-					className='w-full flex items-center justify-center'
-					id='skills'>
-					<VerticalTimeline>
-						{Experience &&
-							Experience.map((n) => (
-								<VerticalTimelineElement
-									key={n.id}
-									className='vertical-timeline-element--work'
-									contentStyle={{
-										background: 'rgb(21, 24, 21)',
-										color: '#888',
-									}}
-									contentArrowStyle={{
-										borderRight: '7px solid  rgb(21, 24, 21)',
-									}}
-									date={n.category}
-									iconStyle={{ background: 'rgb(21, 24, 21)', color: '#888' }}
-									icon={n.iconsSrc}>
-									<h3 className='vertical-timeline-element-title'>{n.title}</h3>
-									<h4 className='vertical-timeline-element-subtitle'>
-										{n.location}
-									</h4>
-									<p>{n.badges}</p>
-								</VerticalTimelineElement>
-							))}
-					</VerticalTimeline>
-				</section>
-				{/* Projects */}
-				<section
-					className='flex flex-wrap items-center justify-evenly my-24 gap-4'
-					id='projects'>
-					{Projects &&
-						Projects.map((n, i) => (
-							<div
-								key={n.id}
-								className='border border-zinc-800 rounded-md p-2 min-w-[275px] md:max-w-[275px] hover:border-zinc-600 duration-100 ease-in-out'>
-								<p className='text-lg text-textBase font-medium uppercase'>
-									{n.name}
-								</p>
-								<img
-									src={n.imageSrc}
-									alt=''
-									className='w-full h-full object-cover rounded-md my-4'
-								/>
-								<div className='flex flex-1 items-center justify-between'>
-									<p className='text-lg text-gray-300'>
-										Technologies
-										<span className='block text-sm text-gray-500'>
-											{n.techs}
-										</span>
-									</p>
-
-									<a href={n.github} target='_blank' rel='noreferrer'>
-										<div>
-											<IoLogoGithub className='text-textBase text-3xl cursor-pointer' />
-										</div>
-									</a>
+				<Element name='about' className='element'>
+					<section className='w-full grid grid-cols-1 md:col-span-4 gap-4 mt-2 mb-24'>
+						{/* image box */}
+						<div className='w-full h-210 flex items-center justify-center'>
+							<div class='avatar'>
+								<div class='w-48 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2'>
+									<img src={amir} alt='' />
 								</div>
 							</div>
-						))}
-				</section>
+						</div>
+						{/* content box */}
+						<div className='w-full h-210 flex flex-col items-center justify-center'>
+							<p className='text-lg text-textBase text-center'>
+								Hi! I'm Amir, a passionate and enthusiastic full stack web
+								developer based in Toronto, Canada. I have a passion for
+								developing tools that simplifies and benefits peoples lives. I
+								love gaming, music, mixed media art, and fintech.
+							</p>
+						</div>
+					</section>
+				</Element>
+
+				{/* timeline section */}
+				<Element name='skills' className='element'>
+					<section className='w-full flex items-center justify-center'>
+						<VerticalTimeline>
+							{Experience &&
+								Experience.map((n) => (
+									<VerticalTimelineElement
+										key={n.id}
+										className='vertical-timeline-element--work'
+										contentStyle={{
+											background: 'rgb(21, 24, 21)',
+											color: '#888',
+										}}
+										contentArrowStyle={{
+											borderRight: '7px solid  rgb(21, 24, 21)',
+										}}
+										date={n.category}
+										iconStyle={{ background: 'rgb(21, 24, 21)', color: '#888' }}
+										icon={n.iconsSrc}>
+										<h3 className='vertical-timeline-element-title'>
+											{n.title}
+										</h3>
+										<h4 className='vertical-timeline-element-subtitle'>
+											{n.location}
+										</h4>
+										<p>{n.badges}</p>
+									</VerticalTimelineElement>
+								))}
+						</VerticalTimeline>
+					</section>
+				</Element>
+
+				{/* Projects */}
+				<Element name='projects' className='element'>
+					<section
+						className='flex flex-wrap items-center justify-evenly my-24 gap-4'
+						id='projects'>
+						{Projects &&
+							Projects.map((n, i) => (
+								<div
+									key={n.id}
+									className='border border-zinc-800 rounded-md p-2 min-w-[275px] md:max-w-[275px] hover:border-zinc-600 duration-100 ease-in-out'>
+									<p className='text-lg text-textBase font-medium uppercase'>
+										{n.name}
+									</p>
+									<img
+										src={n.imageSrc}
+										alt=''
+										className='w-full h-full object-cover rounded-md my-4'
+									/>
+									<div className='flex flex-1 items-center justify-between'>
+										<p className='text-lg text-gray-300'>
+											Technologies
+											<span className='block text-sm text-gray-500'>
+												{n.techs}
+											</span>
+										</p>
+
+										<a href={n.github} target='_blank' rel='noreferrer'>
+											<div>
+												<IoLogoGithub className='text-textBase text-3xl cursor-pointer' />
+											</div>
+										</a>
+									</div>
+								</div>
+							))}
+					</section>
+				</Element>
 			</main>
 		</div>
 	);
