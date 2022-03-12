@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 
 import { Spline } from '@splinetool/react-spline';
 import amir from '../assets/images/amir.jpg';
+import resume from '../assets/images/resume.pdf';
+
 import { IoMenu, IoLogoGithub } from 'react-icons/io5';
 
 import {
@@ -47,7 +49,8 @@ function App() {
 							Contact
 						</a>
 						<a
-							href='#'
+							href={resume}
+							download
 							className='ml-auto text-base text-textBase font-medium hover:text-slate-100 cursor-pointer border border-textBase px-2 py-1 rounded-xl hover:border-gray-100 duration-100 ease-in'>
 							Download Resume
 						</a>
@@ -90,7 +93,7 @@ function App() {
 								Contact
 							</a>
 							<a
-								href='#'
+								href='https://github.com/Amir-A-23/dev-portfolio/blob/main/src/assets/images/Amir-Resume.pdf'
 								className='text-base text-textBase font-medium hover:text-slate-100 cursor-pointer border border-textBase px-2 py-1 rounded-xl hover:border-gray-100 duration-100 ease-in'
 								onClick={() => setIsActive(false)}>
 								Download Resume
