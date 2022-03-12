@@ -17,7 +17,7 @@ function App() {
 	const [isActive, setIsActive] = useState(false);
 
 	return (
-		<div className='flex w-screen min-h-screen flex-col item-center justify-center relative bg-primary pb-20'>
+		<div className='flex w-screen min-h-screen flex-col items-center justify-center relative bg-primary pb-20'>
 			{/* Navigation Bar */}
 			<nav className='w-full px-6 z-50 fixed inset-x-0 top-2 flex justify-center items-center'>
 				<div className='w-full md:w-880 bg-navBar p-4 rounded-2xl flex items-center'>
@@ -104,9 +104,9 @@ function App() {
 			</nav>
 			<div className='relative' id='home'>
 				<Spline scene='https://prod.spline.design/oo6IxFu8UDjFUmjD/scene.spline' />
-				<div className='absolute bottom-10 w-full justify-center items-center flex'>
-					<div className='shadow-md p-4 flex items-center justify-center background-color: rgba(255, 255, 255, 0.08) rounded-3xl'>
-						<p className='text-textBase'>
+				<div className='absolute bottom-10 w-full flex justify-center items-center'>
+					<div className='shadow-md p-4 flex items-center justify-center bg-zinc-900 rounded-3xl'>
+						<p className='text-white'>
 							Hello, I'm a full-stack developer from Toronto, Canada!
 						</p>
 						<span className='animate-wave text-2xl'>👋🏾</span>
@@ -118,24 +118,24 @@ function App() {
 			<main className='w-[80%] mt-4'>
 				{/* About Section */}
 				<section
-					className='w-full grid grid-cols-1 md:grid-cols-2 gap-1 my-24'
+					className='w-full grid grid-cols-1 md:col-span-4 gap-4 mt-2 mb-24'
 					id='about'>
+					{/* image box */}
+					<div className='w-full h-210 flex items-center justify-center'>
+						<div class='avatar'>
+							<div class='w-48 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2'>
+								<img src={amir} alt='' />
+							</div>
+						</div>
+					</div>
 					{/* content box */}
-					<div className='w-full h-420 flex flex-col items-center justify-center'>
+					<div className='w-full h-210 flex flex-col items-center justify-center'>
 						<p className='text-lg text-textBase text-center'>
 							Hi! I'm Amir, a passionate and enthusiastic full stack web
 							developer based in Toronto, Canada. I have a passion for
 							developing tools that simplifies and benefits peoples lives. I
 							love gaming, music, mixed media art, and fintech.
 						</p>
-					</div>
-					{/* image box */}
-					<div className='w-full h-420 flex items-center justify-center'>
-						<div class='avatar'>
-							<div class='w-24 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2'>
-								<img src={amir} alt='' />
-							</div>
-						</div>
 					</div>
 				</section>
 
