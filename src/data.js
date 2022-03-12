@@ -7,33 +7,31 @@ import pix from './assets/images/pix.gif';
 export const Experience = [
 	{
 		id: 1,
-		category: 'Languages',
+		category: 'LANGUAGES',
 		iconsSrc: <IoCodeWorking />,
-		badges:
-			'Creative Direction, User Experience, Visual Design, Project Management, Team Leading',
+		badges: 'JavaScript (ES6+), HTML5, CSS3, C, C++, Ruby, SQL',
 	},
 	{
 		id: 2,
-		category: 'Frameworks',
+		category: 'FRAMEWORKS',
 		iconsSrc: <IoCodeWorking />,
 		badges:
-			'Creative Direction, User Experience, Visual Design, Project Management, Team Leading',
+			'ReactJS, NextJS, NodeJS, Express, Ruby on Rails, Ajax, SASS, Bootstrap3, Tailwind',
 	},
 
 	{
 		id: 3,
-		category: 'Systems',
+		category: 'SYSTEMS',
 		iconsSrc: <IoCodeWorking />,
 		badges:
-			'Creative Direction, User Experience, Visual Design, Project Management, Team Leading',
+			'PostgreSQL, Prisma ORM, Unreal Engine, Autodesk Maya, Spline Design',
 	},
 
 	{
 		id: 4,
-		category: 'Tools',
+		category: 'TESTING',
 		iconsSrc: <IoCodeWorking />,
-		badges:
-			'Creative Direction, User Experience, Visual Design, Project Management, Team Leading',
+		badges: 'Jest, Mocha, Chai, Cypress, Storybook',
 	},
 ];
 
@@ -58,20 +56,20 @@ export const Projects = [
 		name: 'Appointment Scheduler',
 		imageSrc: scheduler,
 		techs: 'React, Node, Express, PostgreSQL, SASS, Storybook, Jest, Cypress',
-		github: '#',
+		github: 'https://github.com/Amir-A-23/scheduler',
 	},
 	{
 		id: 4,
 		name: 'Tweeter',
 		imageSrc: tweeter,
-		techs: 'Javascript, Node, Express, Jquery, Ajax, HTML, CSS',
-		github: '#',
+		techs: 'JavaScript, Node, Express, Jquery, Ajax, HTML, CSS',
+		github: 'https://github.com/Amir-A-23/tweeter',
 	},
 	{
 		id: 5,
 		name: 'TinyApp',
 		imageSrc: tinyapp,
-		techs: 'Javascript, EJS, Node, Express, JQuery, Mocha & Chai',
-		github: '#',
+		techs: 'JavaScript, EJS, Node, Express, JQuery, Mocha & Chai',
+		github: 'https://github.com/Amir-A-23/tinyapp',
 	},
 ];

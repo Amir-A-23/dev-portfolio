@@ -193,7 +193,7 @@ function App() {
 										</span>
 									</p>
 
-									<a href={n.github}>
+									<a href={n.github} target='_blank' rel='noreferrer'>
 										<div>
 											<IoLogoGithub className='text-textBase text-3xl cursor-pointer' />
 										</div>
