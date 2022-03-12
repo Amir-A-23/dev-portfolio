@@ -118,34 +118,31 @@ function App() {
 			<main className='w-[80%] mt-4'>
 				{/* About Section */}
 				<section
-					className='w-full grid grid-cols-1 md:grid-cols-2 gap-4 my-24'
+					className='w-full grid grid-cols-1 md:grid-cols-2 gap-1 my-24'
 					id='about'>
-					{/* image box */}
-					<div className='w-full h-420 flex items-center justify-center'>
-						<div className='w-275 h-340 relative bg-emerald-200 rounded-md'>
-							<img
-								className='w-full h-full absolute -right-4 top-4 object-cover rounded-lg'
-								src={amir}
-								alt=''
-							/>
-						</div>
-					</div>
 					{/* content box */}
 					<div className='w-full h-420 flex flex-col items-center justify-center'>
 						<p className='text-lg text-textBase text-center'>
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-							eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-							enim ad minim veniam, quis nostrud exercitation ullamco laboris
-							nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-							reprehenderit in voluptate velit esse cillum dolore eu fugiat
-							nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-							sunt in culpa qui officia deserunt mollit anim id est laborum.
+							Hi! I'm Amir, a passionate and enthusiastic full stack web
+							developer based in Toronto, Canada. I have a passion for
+							developing tools that simplifies and benefits peoples lives. I
+							love gaming, music, mixed media art, and fintech.
 						</p>
+					</div>
+					{/* image box */}
+					<div className='w-full h-420 flex items-center justify-center'>
+						<div class='avatar'>
+							<div class='w-24 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2'>
+								<img src={amir} alt='' />
+							</div>
+						</div>
 					</div>
 				</section>
 
 				{/* timeline section */}
-				<section className='w-full flex items-center justify-center'>
+				<section
+					className='w-full flex items-center justify-center'
+					id='skills'>
 					<VerticalTimeline>
 						{Experience &&
 							Experience.map((n) => (
