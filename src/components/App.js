@@ -12,7 +12,7 @@ import {
 } from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
 
-import { Experience, Projects } from '../data';
+import { Experience, Projects, SocialLinks } from '../data';
 
 import { Link, Element } from 'react-scroll';
 function App() {
@@ -264,14 +264,18 @@ function App() {
 				{/* Contact Section */}
 				<Element name='projects' className='element'>
 					<section className='flex flex-col items-center justify-center w-full my-24'>
-						<p className='text-2xl text-gray-300 capitalize'>Follow me on</p>
+						<p className='text-2xl text-gray-300 capitalize'>For Contact</p>
 						<div className='flex items-center justify-center w-full my-4 flex-wrap gap-4'>
-							<a
-								href='#'
-								className='w-full md:w-auto px-3 md:px-8 py-5 border border-zinc-800 rounded-2xl hover:border-zinc-600 duration-100 ease-in-out cursor-pointer flex items-center justify-center gap-3'>
-								<IoLogoGithub className='text-textBase text-3xl cursor-pointer' />
-								<p className='text-lg text-textBase'>Github</p>
-							</a>
+							{SocialLinks &&
+								SocialLinks.map((n) => (
+									<a
+										key={n.id}
+										href={n.link}
+										className='w-full md:w-auto px-3 md:px-8 py-5 border border-zinc-800 rounded-2xl hover:border-zinc-600 duration-100 ease-in-out cursor-pointer flex items-center justify-center gap-3'>
+										{n.iconSrc}
+										<p className='text-lg text-textBase'>{n.name}</p>
+									</a>
+								))}
 						</div>
 					</section>
 				</Element>

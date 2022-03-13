@@ -1,4 +1,9 @@
-import { IoCodeWorking } from 'react-icons/io5';
+import {
+	IoCodeWorking,
+	IoMail,
+	IoLogoLinkedin,
+	IoLogoGithub,
+} from 'react-icons/io5';
 import helpnetwork from './assets/images/helpnetwork.png';
 import scheduler from './assets/images/scheduler.gif';
 import tinyapp from './assets/images/tinyapp.png';
@@ -71,5 +76,28 @@ export const Projects = [
 		imageSrc: tinyapp,
 		techs: 'JavaScript, EJS, Node, Express, JQuery, Mocha & Chai',
 		github: 'https://github.com/Amir-A-23/tinyapp',
+	},
+];
+
+export const SocialLinks = [
+	{
+		id: 1,
+		iconSrc: <IoMail className='text-textBase text-3xl cursor-pointer' />,
+		name: 'email',
+		link: 'mailto:amir.a.23@outlook.com',
+	},
+	{
+		id: 1,
+		iconSrc: (
+			<IoLogoLinkedin className='text-blue-800 text-3xl cursor-pointer' />
+		),
+		name: 'LinkedIn',
+		link: 'www.linkedin.com/in/amir-ali-ama23',
+	},
+	{
+		id: 1,
+		iconSrc: <IoLogoGithub className='text-textBase text-3xl cursor-pointer' />,
+		name: 'GitHub',
+		link: 'https://github.com/Amir-A-23',
 	},
 ];
