@@ -83,7 +83,7 @@ export const SocialLinks = [
 	{
 		id: 1,
 		iconSrc: <IoMail className='text-textBase text-3xl cursor-pointer' />,
-		name: 'email',
+		name: 'Email',
 		link: 'mailto:amir.a.23@outlook.com',
 	},
 	{
