@@ -211,13 +211,13 @@ function App() {
 										date={n.category}
 										iconStyle={{ background: 'rgb(21, 24, 21)', color: '#888' }}
 										icon={n.iconsSrc}>
-										<h3 className='vertical-timeline-element-title'>
+										{/* <h3 className='vertical-timeline-element-title text-gray-100'>
 											{n.title}
 										</h3>
-										<h4 className='vertical-timeline-element-subtitle'>
+										<h4 className='vertical-timeline-element-subtitle text-gray-100'>
 											{n.location}
-										</h4>
-										<p>{n.badges}</p>
+										</h4> */}
+										<p className='text-gray-300'>{n.badges}</p>
 									</VerticalTimelineElement>
 								))}
 						</VerticalTimeline>
@@ -234,8 +234,8 @@ function App() {
 								<div
 									key={n.id}
 									className='border border-zinc-800 rounded-md p-2 min-w-[275px] md:max-w-[275px] hover:border-zinc-600 duration-100 ease-in-out'>
-									<p className='text-lg text-textBase font-medium uppercase'>
-										{n.name}
+									<p className='text-md text-gray-200 font-medium uppercase'>
+										{n.name.length > 25 ? `${n.name.slice(0, 25)}...` : n.name}
 									</p>
 									<img
 										src={n.imageSrc}
@@ -252,12 +252,27 @@ function App() {
 
 										<a href={n.github} target='_blank' rel='noreferrer'>
 											<div>
-												<IoLogoGithub className='text-textBase text-3xl cursor-pointer' />
+												<IoLogoGithub className='text-textBase text-3xl cursor-pointer hover:text-gray-100' />
 											</div>
 										</a>
 									</div>
 								</div>
 							))}
+					</section>
+				</Element>
+
+				{/* Contact Section */}
+				<Element name='projects' className='element'>
+					<section className='flex flex-col items-center justify-center w-full my-24'>
+						<p className='text-2xl text-gray-300 capitalize'>Follow me on</p>
+						<div className='flex items-center justify-center w-full my-4 flex-wrap gap-4'>
+							<a
+								href='#'
+								className='w-full md:w-auto px-3 md:px-8 py-5 border border-zinc-800 rounded-2xl hover:border-zinc-600 duration-100 ease-in-out cursor-pointer flex items-center justify-center gap-3'>
+								<IoLogoGithub className='text-textBase text-3xl cursor-pointer' />
+								<p className='text-lg text-textBase'>Github</p>
+							</a>
+						</div>
 					</section>
 				</Element>
 			</main>
