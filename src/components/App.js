@@ -35,7 +35,8 @@ function App() {
 									to='home'
 									spy={true}
 									smooth={true}
-									duration={500}>
+									duration={500}
+									offset={-100}>
 									Home
 								</Link>
 							</li>
@@ -46,7 +47,8 @@ function App() {
 									to='about'
 									spy={true}
 									smooth={true}
-									duration={500}>
+									duration={500}
+									offset={-100}>
 									About
 								</Link>
 							</li>
@@ -57,7 +59,8 @@ function App() {
 									to='skills'
 									spy={true}
 									smooth={true}
-									duration={500}>
+									duration={500}
+									offset={-100}>
 									Skills
 								</Link>
 							</li>
@@ -68,7 +71,8 @@ function App() {
 									to='projects'
 									spy={true}
 									smooth={true}
-									duration={500}>
+									duration={500}
+									offset={-100}>
 									Projects
 								</Link>
 							</li>
@@ -79,7 +83,8 @@ function App() {
 									to='contact'
 									spy={true}
 									smooth={true}
-									duration={500}>
+									duration={500}
+									offset={-100}>
 									Contact
 								</Link>
 							</li>
@@ -112,6 +117,7 @@ function App() {
 									spy={true}
 									smooth={true}
 									duration={500}
+									offset={-100}
 									onClick={() => setIsActive(false)}>
 									Home
 								</Link>
@@ -122,6 +128,7 @@ function App() {
 									spy={true}
 									smooth={true}
 									duration={500}
+									offset={-100}
 									onClick={() => setIsActive(false)}>
 									About
 								</Link>
@@ -132,16 +139,18 @@ function App() {
 									spy={true}
 									smooth={true}
 									duration={500}
+									offset={-100}
 									onClick={() => setIsActive(false)}>
 									Skills
 								</Link>
 								<Link
 									activeClass='active'
 									className='text-base text-textBase font-medium hover:text-slate-100 cursor-pointer duration-100 ease-in-out'
-									to='project'
+									to='projects'
 									spy={true}
 									smooth={true}
 									duration={500}
+									offset={-100}
 									onClick={() => setIsActive(false)}>
 									Projects
 								</Link>
@@ -152,6 +161,7 @@ function App() {
 									spy={true}
 									smooth={true}
 									duration={500}
+									offset={-100}
 									onClick={() => setIsActive(false)}>
 									Contact
 								</Link>
@@ -170,7 +180,7 @@ function App() {
 					id='home'>
 					<Spline scene='https://draft.spline.design/NFdo0VXLhKzEn6qp/scene.spline' />
 					<div className='absolute bottom-10 w-full flex justify-center items-center'>
-						<div className='shadow-md p-4 flex items-center justify-center bg-zinc-900 rounded-3xl'>
+						<div className='shadow-md p-4 flex items-center justify-center bg-zinc-900 rounded-3xl opacity-50'>
 							<p className='text-white'>
 								Hello, I'm a full-stack developer from Toronto, Canada!
 							</p>
@@ -220,7 +230,7 @@ function App() {
 											contentArrowStyle={{
 												borderRight: '7px solid  rgb(21, 24, 21)',
 											}}
-											date={n.category}
+											date={' ' + n.category + ' '}
 											iconStyle={{
 												background: 'rgb(21, 24, 21)',
 												color: '#888',
