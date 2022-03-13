@@ -266,9 +266,9 @@ function App() {
 											</p>
 
 											<a href={n.github} target='_blank' rel='noreferrer'>
-												<div>
+												<motion.div whileTap={{ scale: 0.8 }}>
 													<IoLogoGithub className='text-textBase text-3xl cursor-pointer hover:text-gray-100' />
-												</div>
+												</motion.div>
 											</a>
 										</div>
 									</div>
@@ -283,13 +283,14 @@ function App() {
 							<div className='flex items-center justify-center w-full my-4 flex-wrap gap-4'>
 								{SocialLinks &&
 									SocialLinks.map((n) => (
-										<a
+										<motion.a
+											whileTap={{ scale: 0.8 }}
 											key={n.id}
 											href={n.link}
 											className='w-full md:w-auto px-3 md:px-8 py-5 border border-zinc-800 rounded-2xl hover:border-zinc-600 duration-100 ease-in-out cursor-pointer flex items-center justify-center gap-3'>
 											{n.iconSrc}
 											<p className='text-lg text-textBase'>{n.name}</p>
-										</a>
+										</motion.a>
 									))}
 							</div>
 						</section>
