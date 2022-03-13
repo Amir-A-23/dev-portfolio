@@ -197,7 +197,7 @@ function App() {
 							{/* image box */}
 							<div className='w-full h-210 flex items-center justify-center mb-2'>
 								<div className='avatar'>
-									<div className='w-48 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2'>
+									<div className='w-48 rounded-full ring ring-white ring-offset-base-100 ring-offset-2'>
 										<img src={amir} alt='' />
 									</div>
 								</div>
