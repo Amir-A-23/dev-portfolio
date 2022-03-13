@@ -180,8 +180,8 @@ function App() {
 					id='home'>
 					<Spline scene='https://draft.spline.design/PTmk58oDSoFEQBqr/scene.spline' />
 					<div className='absolute bottom-10 w-full flex justify-center items-center'>
-						<div className='shadow-md p-4 flex items-center justify-center bg-zinc-900 rounded-3xl opacity-50'>
-							<p className='text-white'>
+						<div className='shadow-md p-4 flex items-center justify-center bg-zinc-900 rounded-3xl '>
+							<p className='text-white text-lg'>
 								Hello, I'm a full-stack developer from Toronto, Canada!
 							</p>
 							<span className='animate-wave text-2xl'>👋🏾</span>
@@ -204,7 +204,7 @@ function App() {
 							</div>
 							{/* content box */}
 							<div className='w-full h-210 flex flex-col items-center justify-center'>
-								<p className='text-lg text-textBase text-justifiy'>
+								<p className='text-lg text-slate-300 text-justifiy'>
 									Hi! I'm Amir, a passionate and enthusiastic full stack web
 									developer based in Toronto, Canada. I have a passion for
 									developing tools that simplifies and benefits peoples lives. I
@@ -242,7 +242,7 @@ function App() {
 										<h4 className='vertical-timeline-element-subtitle text-gray-100'>
 											{n.location}
 										</h4> */}
-											<p className='text-gray-300'>{n.badges}</p>
+											<p className='text-slate-300'>{n.badges}</p>
 										</VerticalTimelineElement>
 									))}
 							</VerticalTimeline>
@@ -259,7 +259,7 @@ function App() {
 									<div
 										key={n.id}
 										className='border border-zinc-800 rounded-md p-2 min-w-[275px] md:max-w-[275px] hover:border-zinc-600 duration-100 ease-in-out'>
-										<p className='text-md text-gray-200 font-medium uppercase'>
+										<p className='text-md text-slate-300 font-medium uppercase'>
 											{n.name.length > 25
 												? `${n.name.slice(0, 25)}...`
 												: n.name}
@@ -272,7 +272,7 @@ function App() {
 										<div className='flex flex-1 items-center justify-between'>
 											<p className='text-lg text-gray-300'>
 												Technologies
-												<span className='block text-sm text-gray-500'>
+												<span className='block text-sm text-gray-400'>
 													{n.techs}
 												</span>
 											</p>
@@ -291,7 +291,7 @@ function App() {
 					{/* Contact Section */}
 					<Element name='contact' className='element'>
 						<section className='flex flex-col items-center justify-center w-full my-24'>
-							<p className='text-2xl text-gray-300 capitalize'>For Contact</p>
+							<p className='text-2xl text-gray-200 capitalize'>For Contact</p>
 							<div className='flex items-center justify-center w-full my-4 flex-wrap gap-4'>
 								{SocialLinks &&
 									SocialLinks.map((n) => (
@@ -303,7 +303,7 @@ function App() {
 											rel='noreferrer'
 											className='w-full md:w-auto px-3 md:px-8 py-5 border border-zinc-800 rounded-2xl hover:border-zinc-600 duration-100 ease-in-out cursor-pointer flex items-center justify-center gap-3'>
 											{n.iconSrc}
-											<p className='text-lg text-textBase'>{n.name}</p>
+											<p className='text-lg text-slate-300'>{n.name}</p>
 										</motion.a>
 									))}
 							</div>
