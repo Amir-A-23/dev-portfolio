@@ -165,8 +165,10 @@ function App() {
 						)}
 					</div>
 				</nav>
-				<div className='relative' id='home'>
-					<Spline scene='https://prod.spline.design/oo6IxFu8UDjFUmjD/scene.spline' />
+				<div
+					className='w-[80%] flex items-center justify-center relative'
+					id='home'>
+					<Spline scene='https://draft.spline.design/NFdo0VXLhKzEn6qp/scene.spline' />
 					<div className='absolute bottom-10 w-full flex justify-center items-center'>
 						<div className='shadow-md p-4 flex items-center justify-center bg-zinc-900 rounded-3xl'>
 							<p className='text-white'>
@@ -178,21 +180,21 @@ function App() {
 				</div>
 
 				{/* Main sections */}
-				<main className='w-[80%] mt-4'>
+				<main className='w-[60%] mt-2'>
 					{/* About Section */}
 					<Element name='about' className='element'>
-						<section className='w-full grid grid-cols-1 md:col-span-4 gap-4 mt-2 mb-24'>
+						<section className='w-full grid grid-cols-1 md:col-span-4 gap-4 mb-24'>
 							{/* image box */}
-							<div className='w-full h-210 flex items-center justify-center'>
-								<div class='avatar'>
-									<div class='w-48 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2'>
+							<div className='w-full h-210 flex items-center justify-center mb-2'>
+								<div className='avatar'>
+									<div className='w-48 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2'>
 										<img src={amir} alt='' />
 									</div>
 								</div>
 							</div>
 							{/* content box */}
 							<div className='w-full h-210 flex flex-col items-center justify-center'>
-								<p className='text-lg text-textBase text-center'>
+								<p className='text-lg text-textBase text-justifiy'>
 									Hi! I'm Amir, a passionate and enthusiastic full stack web
 									developer based in Toronto, Canada. I have a passion for
 									developing tools that simplifies and benefits peoples lives. I
@@ -287,6 +289,8 @@ function App() {
 											whileTap={{ scale: 0.8 }}
 											key={n.id}
 											href={n.link}
+											target='_blank'
+											rel='noreferrer'
 											className='w-full md:w-auto px-3 md:px-8 py-5 border border-zinc-800 rounded-2xl hover:border-zinc-600 duration-100 ease-in-out cursor-pointer flex items-center justify-center gap-3'>
 											{n.iconSrc}
 											<p className='text-lg text-textBase'>{n.name}</p>

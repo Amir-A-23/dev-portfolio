@@ -87,15 +87,15 @@ export const SocialLinks = [
 		link: 'mailto:amir.a.23@outlook.com',
 	},
 	{
-		id: 1,
+		id: 2,
 		iconSrc: (
 			<IoLogoLinkedin className='text-blue-800 text-3xl cursor-pointer' />
 		),
 		name: 'LinkedIn',
-		link: 'www.linkedin.com/in/amir-ali-ama23',
+		link: 'https://www.linkedin.com/in/amir-ali-ama23',
 	},
 	{
-		id: 1,
+		id: 3,
 		iconSrc: <IoLogoGithub className='text-textBase text-3xl cursor-pointer' />,
 		name: 'GitHub',
 		link: 'https://github.com/Amir-A-23',
