@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 import { Spline } from '@splinetool/react-spline';
-import amir from '../assets/images/amir.jpg';
+import amir from '../assets/images/amir.jpeg';
 import resume from '../assets/images/resume.pdf';
 
 import { IoMenu, IoLogoGithub } from 'react-icons/io5';
