@@ -6,6 +6,7 @@ import {
 } from 'react-icons/io5';
 import helpnetwork from './assets/images/helpnetwork.png';
 import scheduler from './assets/images/scheduler.gif';
+import portfolio from './assets/images/portfolio.gif';
 import tinyapp from './assets/images/tinyapp.png';
 import tweeter from './assets/images/tweeter.png';
 import pix from './assets/images/pix.gif';
@@ -58,20 +59,27 @@ export const Projects = [
 	},
 	{
 		id: 3,
+		name: 'Portfolio Site',
+		imageSrc: portfolio,
+		techs: 'React, Tailwind, Framer-Motion, Spline.Design, Firebase',
+		github: 'https://github.com/Amir-A-23/dev-portfolio',
+	},
+	{
+		id: 4,
 		name: 'Appointment Scheduler',
 		imageSrc: scheduler,
 		techs: 'React, Node, Express, PostgreSQL, SASS, Storybook, Jest, Cypress',
 		github: 'https://github.com/Amir-A-23/scheduler',
 	},
 	{
-		id: 4,
+		id: 5,
 		name: 'Tweeter',
 		imageSrc: tweeter,
 		techs: 'JavaScript, Node, Express, Jquery, Ajax, HTML, CSS',
 		github: 'https://github.com/Amir-A-23/tweeter',
 	},
 	{
-		id: 5,
+		id: 6,
 		name: 'TinyApp',
 		imageSrc: tinyapp,
 		techs: 'JavaScript, EJS, Node, Express, JQuery, Mocha & Chai',
