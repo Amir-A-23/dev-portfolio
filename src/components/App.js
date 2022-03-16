@@ -205,10 +205,10 @@ function App() {
 							{/* content box */}
 							<div className='w-full h-210 flex flex-col items-center justify-center'>
 								<p className='text-lg text-slate-300 text-justifiy'>
-									Hi! I'm Amir, a passionate and enthusiastic full stack web
-									developer based in Toronto, Canada. I have a passion for
-									developing tools that simplifies and benefits peoples lives. I
-									love gaming, music, mixed media art, and fintech.
+									I'm an energized and enthusiastic full stack web developer
+									based in Toronto, Canada. I have a passion for developing
+									tools that help service and engage with my communities. I love
+									gaming, music, mixed media art, and fintech.
 								</p>
 							</div>
 						</section>
