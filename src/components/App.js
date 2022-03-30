@@ -178,7 +178,7 @@ function App() {
 				<div
 					className='w-[80%] flex items-center justify-center relative'
 					id='home'>
-					<Spline scene='https://draft.spline.design/PTmk58oDSoFEQBqr/scene.spline' />
+					{/* <Spline scene='https://draft.spline.design/PTmk58oDSoFEQBqr/scene.spline' /> */}
 					<div className='absolute bottom-10 w-full flex justify-center items-center'>
 						<div className='shadow-md p-4 flex items-center justify-center bg-zinc-900 rounded-3xl '>
 							<p className='text-white text-lg'>
