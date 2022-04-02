@@ -36,7 +36,7 @@ function App() {
 									spy={true}
 									smooth={true}
 									duration={500}
-									offset={-100}>
+									offset={-250}>
 									Home
 								</Link>
 							</li>
@@ -117,7 +117,7 @@ function App() {
 									spy={true}
 									smooth={true}
 									duration={500}
-									offset={-100}
+									offset={-250}
 									onClick={() => setIsActive(false)}>
 									Home
 								</Link>
@@ -175,22 +175,24 @@ function App() {
 						)}
 					</div>
 				</nav>
-				<div
-					className='w-[80%] flex items-center justify-center relative'
-					id='home'>
-					{/* <Spline scene='https://draft.spline.design/PTmk58oDSoFEQBqr/scene.spline' /> */}
-					<div className='absolute bottom-10 w-full flex justify-center items-center'>
-						<div className='shadow-md p-4 flex items-center justify-center bg-zinc-900 rounded-3xl '>
-							<p className='text-white text-lg'>
-								Hello, I'm a full-stack developer from Toronto, Canada!
-							</p>
-							<span className='animate-wave text-2xl'>👋🏾</span>
-						</div>
-					</div>
-				</div>
 
 				{/* Main sections */}
-				<main className='w-[60%] mt-2'>
+				<main className='w-[60%] mt-48 '>
+					{/* Home Section */}
+					<Element name='home' className='element'>
+						<div className='flex items-center justify-center relative'>
+							{/* <Spline scene='https://draft.spline.design/PTmk58oDSoFEQBqr/scene.spline' /> */}
+							<div className='absolute bottom-6 w-full flex justify-center items-center'>
+								<div className='shadow-md p-4 flex items-center justify-center bg-zinc-900 rounded-3xl '>
+									<p className='text-white text-lg'>
+										Hello I'm Amir, a full-stack developer based in Toronto,
+										Canada!
+									</p>
+									<span className='animate-wave text-2xl'> 👋🏾</span>
+								</div>
+							</div>
+						</div>
+					</Element>
 					{/* About Section */}
 					<Element name='about' className='element'>
 						<section className='w-full grid grid-cols-1 md:col-span-4 gap-4 mb-24'>
@@ -204,11 +206,14 @@ function App() {
 							</div>
 							{/* content box */}
 							<div className='w-full h-210 flex flex-col items-center justify-center'>
-								<p className='text-lg text-slate-300 text-justifiy'>
-									I'm an energized and enthusiastic full stack web developer
-									based in Toronto, Canada. I have a passion for developing
-									tools that help service and engage with my communities. I love
-									gaming, music, mixed media art, and fintech.
+								<p className='text-lg text-slate-300 text-justify'>
+									I'm an energized and enthusiastic developer currently focused
+									on creating tools that focus on civic services and engage my
+									local communities.
+								</p>
+								<p className='text-lg text-slate-300 text-justify'>
+									Outside of development I love gaming, music, and mixed media
+									art. Thanks for stopping by!
 								</p>
 							</div>
 						</section>
