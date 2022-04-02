@@ -1,6 +1,6 @@
 # Web Portfolio
 
-My current web porfolio displaying my experience and skillset.
+My current web portfolio displaying my experience and skillset.
 Built using React and deployed using Firebase.
 Visit at: https://amir-portfolio.web.app/
 
